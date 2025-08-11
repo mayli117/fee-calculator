@@ -1,5 +1,6 @@
 Flask==2.2.5
 python-docx==0.8.11
-Werkzeug=2.2.3
+Werkzeug==2.2.3
 beautifulsoup4==4.9.3
+
 

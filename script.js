@@ -2,7 +2,7 @@
 async function uploadFile(file) {
   const formData = new FormData();
   formData.append("file", file);
-  const res = await fetch("https://github.com/mayli117/fee-calculator.vercel.app/upload", {
+  const res = await fetch("http://localhost:5000/upload", {
     method: "POST",
     body: formData
   });
@@ -24,7 +24,7 @@ async function calculate() {
     rent: oldRent
   };
 
-  const res = await fetch("https://github.com/mayli117/fee-calculator.vercel.app/calculate", {
+  const res = await fetch("http://localhost:5000/calculate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload)
@@ -45,4 +45,6 @@ function copyResult() {
   document.execCommand("copy");
   alert("已複製結果！");
 }
+
+
 

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>未滿租期解約金與月租費差額計算</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    label, input, select, textarea { display: block; margin: 10px 0; }
+    textarea { width: 100%; height: 300px; }
+  </style>
+</head>
+<body>
+  <h2>📅 未滿租期解約金與月租費差額計算</h2>
+
+  <label>起始日（民國格式，如1140302）</label>
+  <input type="text" id="startDate">
+
+  <label>終止日（民國格式，如1140625）</label>
+  <input type="text" id="endDate">
+
+  <label>週期</label>
+  <select id="cycle">
+    <option value="1">1週</option>
+    <option value="2">2週</option>
+    <option value="3">3週</option>
+    <option value="4">4週</option>
+    <option value="5">5週</option>
+    <option value="6">6週</option>
+  </select>
+
+  <label>月租費（原價）</label>
+  <input type="number" id="oldRent">
+
+  <label>月租費（優惠價）</label>
+  <input type="number" id="newRent">
+
+  <label>套餐類型</label>
+  <select id="package">
+    <option value="3792">家庭特選餐（3792元）</option>
+    <option value="2352">自選20（2352元）</option>
+    <option value="2520">自選全選（2520元）</option>
+    <option value="4344">家庭豪華餐（4344元）</option>
+  </select>
+
+  <label>📤 上傳檔案（選填）</label>
+  <input type="file" id="uploadFile">
+
+  <button onclick="calculate()">🧮 計算</button>
+  <button onclick="copyResult()">📋 複製結果</button>
+
+  <label>📄 計算結果</label>
+  <textarea id="result"></textarea>
+
+  <script src="script.js"></script>
+</body>
+</html>
